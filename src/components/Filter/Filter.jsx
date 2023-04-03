@@ -10,14 +10,16 @@ export const Filter = () => {
     dispatch(filteredContacts(filterValue));
   };
   return (
-    <label className={css.filter__label}>
-      <span>Find contact by name</span>
-      <input
-        className={css.filter__input}
-        type="text"
-        placeholder="Find contacts"
-        onChange={onChangeFilter}
-      />
-    </label>
+    <div className={css.container}>
+      <label className={css.filter__label}>
+        <span>Find contact by name</span>
+        <input
+          className={css.filter__input}
+          type="text"
+          placeholder="Find contacts"
+          onChange={onChangeFilter}
+        />
+      </label>
+    </div>
   );
 };

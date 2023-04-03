@@ -1,0 +1,22 @@
+.nav {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 0 15px;
+}
+
+.nav__link__home, .nav__link__contacts  {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+    column-gap: 10px;
+}
+
+.nav__link__home:hover, .nav__link__home:focus, .nav__link__contacts:hover, .nav__link__contacts:focus  {
+  color: rgba(71, 170, 251, 0.677);
+}

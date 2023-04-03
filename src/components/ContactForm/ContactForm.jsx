@@ -51,7 +51,7 @@ export const ContactForm = () => {
               className={css.form__input}
             />
             {errors?.name && (
-              <span style={{ display: 'block', marginBottom: 5, color: 'red' }}>
+              <span className={css.form__error}>
                 {errors?.name?.message || 'Error'}
               </span>
             )}
@@ -90,9 +90,9 @@ export const ContactForm = () => {
         </button>
       </form>
       {!contacts.length ? (
-        <h2>The list of contacts is empty.</h2>
+        <h2 className={css.contacts__title}>The list of contacts is empty.</h2>
       ) : (
-        <h2>Contacts</h2>
+        <h2 className={css.contacts__title}>Contacts</h2>
       )}
     </>
   );

@@ -19,11 +19,13 @@ const ContactsPage = () => {
   }, [dispatch]);
   return (
     <div className={css.wrap}>
-      <ContactForm />
-      <Filter />
-      {isLoading && <Loader />}
-      {error && <p>{error}</p>}
-      <ContactList />
+      <div className={css.container}>
+        <ContactForm />
+        <Filter />
+        {isLoading && <Loader />}
+        {error && <p>{error}</p>}
+        <ContactList />
+      </div>
     </div>
   );
 };

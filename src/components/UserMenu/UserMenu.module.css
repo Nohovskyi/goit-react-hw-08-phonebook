@@ -1,0 +1,23 @@
+.btn {
+  padding: 5px;
+  width: 80px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:focus, .btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.user__wrap {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 20px;
+    padding: 0 15px;
+}
+
+.user__name {
+  color: rgba(71, 170, 251, 0.677);
+}

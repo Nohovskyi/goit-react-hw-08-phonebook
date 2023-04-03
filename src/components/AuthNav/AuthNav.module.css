@@ -1,0 +1,22 @@
+.nav {
+  padding: 0 15px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+    column-gap: 10px;
+}
+
+.nav__link__login, .nav__link__register  {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+.nav__link__login:hover, .nav__link__login:focus, .nav__link__register:hover, .nav__link__register:focus  {
+  color: rgba(71, 170, 251, 0.677);
+}
+
+

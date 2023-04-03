@@ -33,7 +33,7 @@ const LoginPage = () => {
           <div className={css.form__input__wrap}>
             <input
               {...register('email', {
-                required: 'please enter email',
+                required: 'Please enter email',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
                   message: 'Incorrect mail form',
@@ -42,6 +42,7 @@ const LoginPage = () => {
               type="mail"
               name="email"
               placeholder="example@email.com"
+              className={css.form__input}
             />
             {errors?.email && (
               <span className={css.form__error}>{errors?.email?.message}</span>
@@ -56,13 +57,14 @@ const LoginPage = () => {
               {...register('password', {
                 required: 'Please, enter password',
                 minLength: {
-                  value: 6,
-                  message: 'Not less then 6 numbers',
+                  value: 7,
+                  message: 'Not less then 7 numbers',
                 },
               })}
               type="password"
               name="password"
               placeholder="*******"
+              className={css.form__input}
             />
             <span className={css.form__error}>{errors?.password?.message}</span>
           </div>

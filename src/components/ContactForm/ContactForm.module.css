@@ -3,9 +3,9 @@
   flex-direction: column;
   row-gap: 10px;
   width: 500px;
-  border: 2px solid black;
-  margin-bottom: 20px;
-  padding: 10px;
+  box-shadow: 2px 2px 8px 2px gray;
+  margin: 50px auto;
+  padding: 20px;
 }
 
 .form__label {
@@ -16,13 +16,14 @@
 
 .form__input__wrap {
   display: flex;
+  column-gap: 20px;
 }
 
 .form__input {
-  width: 150px;
+  width: 200px;
   height: 20px;
   padding: 5px 10px;
-  margin-right: 20px;
+  /* margin-right: 200px; */
 }
 
 .form__error {
@@ -39,8 +40,14 @@
   cursor: pointer;
 }
 
-
-.form__btn:focus {
+.form__btn:focus, .form__btn:hover {
   background-color: #6af36a;
   color: white;
+}
+
+.contacts__title {
+  width: 500px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }

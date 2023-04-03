@@ -1,7 +1,9 @@
+import css from './HomePage.module.css'
+
 const HomePage = () => {
     return (
-      <div>
-        <h1>Welcome in Phone Book!</h1>
+      <div className={css.wrap}>
+        <h1 className={css.title}>Welcome in Phone Book!</h1>
       </div>
     );
 }

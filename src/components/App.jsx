@@ -5,22 +5,23 @@ import LoginPage from '../pages/LoginPage/LoginPage';
 import ContactsPage from '../pages/ContactPage/ContactPage';
 import RestrictedRoute from './RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import { getError, getIsLoading } from 'redux/selectors';
+import { refreshUser } from 'redux/auth/operations';
 import { Route, Routes } from 'react-router';
+import { useAuth } from 'hooks/useAuth';
 import css from './App.module.css';
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
+  const { isRefreshing } = useAuth();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
-  return (
+  return isRefreshing ? (
+    <b>Refreshing user...</b>
+  ) : (
     <div className={css.wrap}>
       <Routes>
         <Route path="/" element={<Layout />}>

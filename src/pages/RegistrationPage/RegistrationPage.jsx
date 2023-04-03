@@ -91,8 +91,8 @@ const RegistrationPage = () => {
             {...register('password', {
               required: 'enter password',
               minLength: {
-                value: 6,
-                message: 'not less then 6 numbers',
+                value: 7,
+                message: 'Not less then 7 numbers',
               },
             })}
             id="password"
